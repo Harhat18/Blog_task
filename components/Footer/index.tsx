@@ -5,7 +5,7 @@ import styles from "./styles.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <h4>HarHat</h4>
+      <h4>@Harun Hatiboğlu</h4>
     </footer>
   );
 }

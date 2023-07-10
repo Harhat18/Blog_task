@@ -14,7 +14,7 @@ const AuthorCard: React.FC<User> = (user) => {
           <div className={styles.authorName}>
             {user.firstName} {user.lastName}
           </div>
-          <div>Email:: {user.email}</div>
+          <div className={styles.authorEmail}>Email:: {user.email}</div>
         </div>
       </div>
     </div>

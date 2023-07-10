@@ -18,3 +18,21 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+/* Tablet boyutu için stil */
+@media (max-width: 768px) {
+  .authorName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+/* Telefon boyutu için stil */
+@media (max-width: 576px) {
+  .authorName {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .authorEmail {
+    font-size: 14px;
+  }
+}
