@@ -36,7 +36,9 @@
   height: 50px;
   border-radius: 25%;
 }
-
+.info {
+  font-size: 12px;
+}
 /* Tablet boyutu için stil */
 @media (max-width: 768px) {
 }
