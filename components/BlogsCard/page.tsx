@@ -6,7 +6,7 @@ import { ArrowRight, BookOpenCheck } from "lucide-react";
 import styles from "./styles.module.css";
 import { BlogCard } from "@/types/types";
 
-const BlogCard: React.FC<BlogCard> = ({ title, body, id }) => {
+const BlogCards: React.FC<BlogCard> = ({ title, body, id }) => {
   if (!title && !body) {
     return <p>No posts available.</p>;
   }
@@ -39,4 +39,4 @@ const BlogCard: React.FC<BlogCard> = ({ title, body, id }) => {
   );
 };
 
-export default BlogCard;
+export default BlogCards;

@@ -14,3 +14,8 @@ export interface BlogCard {
   body: string;
   id: number;
 }
+export interface PageProps {
+  params: {
+    id: number;
+  };
+}
