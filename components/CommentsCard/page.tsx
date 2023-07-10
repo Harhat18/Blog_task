@@ -4,12 +4,12 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import styles from "./styles.module.css";
 import { ThumbsDown, ThumbsUp, UserPlus } from "lucide-react";
-interface CommentedUserProps {
+interface CommentsProps {
   userId: number;
   body: string;
 }
 
-const CommentsCard: React.FC<CommentedUserProps> = ({ userId, body }) => {
+const CommentsCard: React.FC<CommentsProps> = ({ userId, body }) => {
   const [user, setUser] = useState<User | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<Error | null>(null);
@@ -22,7 +22,7 @@ const CommentsCard: React.FC<CommentedUserProps> = ({ userId, body }) => {
         console.log({ userData });
         setUser(userData);
       } catch (err) {
-        setError(err);
+        setError(err as Error);
       } finally {
         setIsLoading(false);
       }

@@ -15,6 +15,7 @@ export interface Comment {
   id: number;
   body: string;
   user: { username: string; id: number };
+  comments: Comment[];
 }
 
 export interface PageProps {
