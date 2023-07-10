@@ -4,10 +4,9 @@ import React, { useEffect, useState, useContext } from "react";
 import styles from "./styles.module.css";
 import BlogCard from "../components/BlogsCard/page";
 
+import SearchBar from "@/components/Search /SearchBar";
 import { Posts } from "@/types/types";
 import { getPosts } from "./api/api";
-import SearchBar from "@/components/Search /SearchBar";
-import BlogCards from "../components/BlogsCard/page";
 
 const Home: React.FC = () => {
   const [filteredPosts, setFilteredPosts] = useState<Posts[]>([]);
@@ -50,7 +49,7 @@ const Home: React.FC = () => {
       {filteredPosts.length > 0 ? (
         <div className={styles.blogsContainer}>
           {filteredPosts.map((post: Posts) => (
-            <BlogCards key={post.id} {...post} />
+            <BlogCard key={post.id} {...post} />
           ))}
         </div>
       ) : (

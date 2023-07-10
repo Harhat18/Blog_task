@@ -1,28 +1,31 @@
-import "./globals.css";
-import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-const inter = Inter({ subsets: ["latin"] });
 import styles from "./styles.module.css";
+import { BlogProvider } from "../context/context";
+const font = Inter({ subsets: ["latin"] });
 
-export const metadata: Metadata = {
+interface RootLayoutProps {
+  children: React.ReactNode;
+}
+
+export const metadata = {
   title: "Blog Task",
   description: "Blog Task",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
   return (
-    <html lang="en" className={inter.className}>
-      <body className={styles.container}>
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <BlogProvider>
+      <html lang="tr" className={font.className}>
+        <body className={styles.container}>
+          <Header />
+          {children}
+          <Footer />
+        </body>
+      </html>
+    </BlogProvider>
   );
-}
+};
+
+export default RootLayout;
