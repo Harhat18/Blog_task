@@ -1,0 +1,20 @@
+.authorCard {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #f5f5f5;
+  border-radius: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 8px;
+}
+
+.authorImage {
+  margin-right: 24px;
+  background-color: white !important;
+  border-radius: 50%;
+}
+
+.authorName {
+  font-size: 24px;
+  font-weight: bold;
+}
