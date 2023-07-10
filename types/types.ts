@@ -11,6 +11,11 @@ export interface User {
   image: string;
   email: string;
 }
+export interface Comment {
+  id: number;
+  body: string;
+  user: { username: string; id: number };
+}
 
 export interface PageProps {
   params: {
