@@ -4,6 +4,19 @@ export interface Post {
   body: string;
   userId: number;
 }
+export interface User {
+  id: number;
+  firstName: string;
+  lastName: string;
+  image: string;
+  email: string;
+}
+
+export interface PageProps {
+  params: {
+    id: number;
+  };
+}
 export interface Posts {
   id: number;
   title: string;
@@ -13,16 +26,4 @@ export interface BlogCard {
   title: string;
   body: string;
   id: number;
-}
-export interface PageProps {
-  params: {
-    id: number;
-  };
-}
-export interface User {
-  id: number;
-  firstName: string;
-  lastName: string;
-  image: string;
-  email: string;
 }
