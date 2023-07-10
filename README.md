@@ -1,4 +1,4 @@
-Vercel Deployment: https://blog-task-eight.vercel.app/
+Deploy with Vercel: https://blog-task-eight.vercel.app/
 
 ## Getting Started
 
